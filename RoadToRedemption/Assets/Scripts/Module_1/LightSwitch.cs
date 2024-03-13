@@ -5,12 +5,13 @@ using UnityEngine.Serialization;
 
 public class LightSwitch : MonoBehaviour, IInterectable
 {
-    [SerializeField] private Light m_Light;
-    [SerializeField] private GameObject gameObjectLight;
+    //[SerializeField] private Light m_Light;
+    
+    [SerializeField] private GameObject m_gameObjectLight;
     [FormerlySerializedAs("_isOn")] [SerializeField] private bool isOn;
     private void Start()
     {
-        m_Light.enabled = isOn;
+        m_gameObjectLight.SetActive(isOn);
     }
 
     public string GetDescription()
@@ -23,6 +24,6 @@ public class LightSwitch : MonoBehaviour, IInterectable
     {
         isOn = !isOn;
         //m_Light.enabled = isOn;
-        gameObjectLight.SetActive(isOn);
+        m_gameObjectLight.SetActive(isOn);
     }
 }
