@@ -217,6 +217,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &567396050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567396051}
+  m_Layer: 0
+  m_Name: Lighting_Bathroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &567396051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567396050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7467857386239604673}
+  - {fileID: 7467857383848050051}
+  m_Father: {fileID: 7467857383605762801}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688327018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5232,7 +5265,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7467857385706190105}
   - {fileID: 7467857384049875171}
   m_Father: {fileID: 7467857383605762801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5492,6 +5524,7 @@ Transform:
   - {fileID: 7467857383845692233}
   - {fileID: 1688327019}
   - {fileID: 1911305900}
+  - {fileID: 567396051}
   m_Father: {fileID: 7467857383839946155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7467857383669585901
@@ -5596,7 +5629,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7467857386323770541}
   - {fileID: 7467857386128453065}
   - {fileID: 7467857386256877637}
   - {fileID: 7467857383123370507}
@@ -5605,6 +5637,8 @@ Transform:
   - {fileID: 7467857382938403747}
   - {fileID: 7467857382787306463}
   - {fileID: 7467857385373221533}
+  - {fileID: 7467857386323770541}
+  - {fileID: 7467857385706190105}
   m_Father: {fileID: 7467857383605762801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7467857383848050051
@@ -5615,12 +5649,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7471068009723790367}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0.005, y: -0.625, z: 0.006}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -1.8290004, y: 2.02, z: -6.099999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7467857386323770541}
+  m_Father: {fileID: 567396051}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!4 &7467857383884015219
 Transform:
@@ -6275,13 +6309,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7471068009335368769}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.834, y: 2.645, z: -8.447}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.8340005, y: 2.645, z: -8.447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7467857386239604673}
-  m_Father: {fileID: 7467857383140210645}
+  m_Children: []
+  m_Father: {fileID: 7467857383845692233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7467857385742460901
 Transform:
@@ -6501,12 +6534,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7471068010280720461}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0.005, y: -0.625, z: 0.006}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: -1.8290004, y: 2.02, z: -8.440999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7467857385706190105}
+  m_Father: {fileID: 567396051}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!4 &7467857386256877637
 Transform:
@@ -6550,12 +6583,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7471068009466291257}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.834, y: 2.645, z: -6.106}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.8340005, y: 2.645, z: -6.1059995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7467857383848050051}
+  m_Children: []
   m_Father: {fileID: 7467857383845692233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7467857386334303507
@@ -7259,6 +7291,8 @@ GameObject:
   - component: {fileID: 7467857380541340565}
   - component: {fileID: 7482766042297025497}
   - component: {fileID: 7493052035410722643}
+  - component: {fileID: 7493052035410722645}
+  - component: {fileID: 7493052035410722644}
   m_Layer: 0
   m_Name: PFB_Lightswitch (3)
   m_TagString: Untagged
@@ -10498,6 +10532,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7493052035410722644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471068008283123727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c3fffdc59342bf40a003e46ed96e0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameObjectLight: {fileID: 567396050}
+  isOn: 1
+--- !u!65 &7493052035410722645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471068008283123727}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09499431, y: 0.14520548, z: 0.009999999}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7493052035425294609
 MeshRenderer:
   m_ObjectHideFlags: 0
