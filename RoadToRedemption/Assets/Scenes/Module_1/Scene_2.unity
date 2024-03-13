@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d3bf447e5993d488dd23e6e2039183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 5
+  fadeDuration: 100
   screenObject: {fileID: 187048721}
 --- !u!4 &403450666
 Transform:
@@ -5388,7 +5388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &959354199374910636
 MeshRenderer:
   m_ObjectHideFlags: 0
