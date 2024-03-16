@@ -3174,28 +3174,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: cdc73258ef2d5ee449fe6d18ccf0122f, type: 3}
---- !u!64 &7443960799566384565
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7471068009701195151}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1ecdaf6793a1141fbbd1607673362cbf, type: 3}
 --- !u!64 &7443960799686186977
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7425,7 +7403,7 @@ GameObject:
   - component: {fileID: 7467857381023579623}
   - component: {fileID: 7482766043227043983}
   - component: {fileID: 7493052068318656593}
-  - component: {fileID: 7443960799566384565}
+  - component: {fileID: 7493052068318656594}
   m_Layer: 0
   m_Name: PFB_FreestandMirror
   m_TagString: Untagged
@@ -13466,6 +13444,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7493052068318656594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471068009701195151}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.65999997, y: 0.015704691, z: 0.6035415}
+  m_Center: {x: -6.1068043e-15, y: 0.9713384, z: 0.0000014305115}
 --- !u!114 &7584988812907433398
 MonoBehaviour:
   m_ObjectHideFlags: 0
