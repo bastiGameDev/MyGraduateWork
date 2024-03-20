@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class LightSwitch : MonoBehaviour, IInterectable
 {
     //[SerializeField] private Light m_Light;
+    [SerializeField] private AudioSource soundLightswitch;
     
     [SerializeField] private GameObject m_gameObjectLight;
     [FormerlySerializedAs("_isOn")] [SerializeField] private bool isOn;
@@ -22,6 +23,8 @@ public class LightSwitch : MonoBehaviour, IInterectable
 
     public void Interact()
     {
+        soundLightswitch.Play();
+        
         isOn = !isOn;
         //m_Light.enabled = isOn;
         m_gameObjectLight.SetActive(isOn);
