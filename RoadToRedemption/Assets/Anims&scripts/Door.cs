@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInterectable
 
 {
+    [SerializeField] private AudioSource soundDoorOpen;
     public Animator m_Animator;
     public bool isOpen;
     void Start()
@@ -23,6 +24,8 @@ public class Door : MonoBehaviour, IInterectable
 
     public void Interact()
     {
+        soundDoorOpen.Play();
+        
         isOpen = !isOpen;
         if (isOpen)
             m_Animator.SetBool("isOpen", true);
