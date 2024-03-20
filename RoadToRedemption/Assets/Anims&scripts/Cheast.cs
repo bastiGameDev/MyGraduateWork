@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Cheast : MonoBehaviour, IInterectable
 {
+    [SerializeField] private AudioSource soundCheast;
+    
     public Animator m_Animator;
     public bool isOpen;
     void Start()
@@ -22,6 +24,8 @@ public class Cheast : MonoBehaviour, IInterectable
 
     public void Interact()
     {
+        soundCheast.Play();
+            
         isOpen = !isOpen;
         if (isOpen)
             m_Animator.SetBool("isOpen", true);
