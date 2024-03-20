@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class KithenDoor : MonoBehaviour, IInterectable
 {
+    [SerializeField] private AudioSource soundKitchenDoor;
+    
     public Animator m_Animator;
     public bool isOpen;
     void Start()
@@ -22,6 +24,8 @@ public class KithenDoor : MonoBehaviour, IInterectable
 
     public void Interact()
     {
+        soundKitchenDoor.Play();
+            
         isOpen = !isOpen;
         if (isOpen)
             m_Animator.SetBool("isOpen", true);

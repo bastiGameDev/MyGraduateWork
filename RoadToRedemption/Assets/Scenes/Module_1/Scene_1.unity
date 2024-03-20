@@ -123,6 +123,134 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &61420313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 61420315}
+  - component: {fileID: 61420314}
+  m_Layer: 0
+  m_Name: KitchendoorSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &61420314
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61420313}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8b272fae547105a45b9db307dbd425ee, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &61420315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61420313}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.750153, y: -2.81726, z: 40.26727}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192075664
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +405,7 @@ GameObject:
   - component: {fileID: 301682157}
   - component: {fileID: 301682156}
   m_Layer: 0
-  m_Name: Lightswich
+  m_Name: LightswichSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9748,6 +9876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7e154375d7d74984bfd043d8eabe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundKitchenDoor: {fileID: 61420314}
   m_Animator: {fileID: 7493052035379567513}
   isOpen: 0
 --- !u!95 &7493052035379567513
@@ -11187,6 +11316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7e154375d7d74984bfd043d8eabe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundKitchenDoor: {fileID: 61420314}
   m_Animator: {fileID: 7493052066107018021}
   isOpen: 0
 --- !u!95 &7493052066107018021
@@ -11446,6 +11576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7e154375d7d74984bfd043d8eabe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundKitchenDoor: {fileID: 61420314}
   m_Animator: {fileID: 7493052066463510165}
   isOpen: 0
 --- !u!95 &7493052066463510165
@@ -12749,6 +12880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7e154375d7d74984bfd043d8eabe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundKitchenDoor: {fileID: 61420314}
   m_Animator: {fileID: 7493052067584742646}
   isOpen: 0
 --- !u!23 &7493052067594359147
@@ -13388,6 +13520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d7e154375d7d74984bfd043d8eabe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundKitchenDoor: {fileID: 61420314}
   m_Animator: {fileID: 7493052068229838227}
   isOpen: 0
 --- !u!95 &7493052068229838227
@@ -13851,3 +13984,4 @@ SceneRoots:
   - {fileID: 8050089121359707783}
   - {fileID: 1298662193}
   - {fileID: 301682157}
+  - {fileID: 61420315}
