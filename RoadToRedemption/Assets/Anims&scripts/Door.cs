@@ -6,6 +6,7 @@ public class Door : MonoBehaviour, IInterectable
 
 {
     [SerializeField] private AudioSource soundDoorOpen;
+    
     public Animator m_Animator;
     public bool isOpen;
     void Start()
