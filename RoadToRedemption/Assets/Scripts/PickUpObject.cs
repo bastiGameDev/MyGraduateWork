@@ -7,6 +7,7 @@ public class PickUpObject : MonoBehaviour
 
     [SerializeField] private float pickupDistance = 5f; // Максимальное расстояние для подбора объекта
     [SerializeField] private AudioSource soundPick;
+
     void Update()
     {
         // Если объект не поднимается и нажата кнопка для подбора объекта
@@ -21,6 +22,10 @@ public class PickUpObject : MonoBehaviour
                     // Поднимаем объект
                     soundPick.Play();
                     carriedObject = hit.collider.gameObject;
+                    // Отключаем компонент коллайдера объекта
+                    Collider objCollider = carriedObject.GetComponent<Collider>();
+                    if (objCollider != null)
+                        objCollider.enabled = false;
                     carriedObject.GetComponent<Rigidbody>().isKinematic = true;
                     carriedObject.transform.parent = handTransform;
                     carriedObject.transform.localPosition = Vector3.zero;
@@ -32,6 +37,10 @@ public class PickUpObject : MonoBehaviour
         else if (carriedObject != null && Input.GetKeyDown(KeyCode.Mouse0))
         {
             // Отпускаем объект
+            // Включаем компонент коллайдера объекта
+            Collider objCollider = carriedObject.GetComponent<Collider>();
+            if (objCollider != null)
+                objCollider.enabled = true;
             carriedObject.GetComponent<Rigidbody>().isKinematic = false;
             carriedObject.transform.parent = null;
             carriedObject = null;
