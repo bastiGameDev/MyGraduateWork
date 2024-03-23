@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
 {
-    public Transform handTransform; // Ссылка на трансформ рук персонажа
+    [SerializeField] private Transform handTransform; // Ссылка на трансформ рук персонажа
     private GameObject carriedObject; // Ссылка на поднимаемый объект
 
-    public float pickupDistance = 5f; // Максимальное расстояние для подбора объекта
-
+    [SerializeField] private float pickupDistance = 5f; // Максимальное расстояние для подбора объекта
+    [SerializeField] private AudioSource soundPick;
     void Update()
     {
         // Если объект не поднимается и нажата кнопка для подбора объекта
@@ -19,6 +19,7 @@ public class PickUpObject : MonoBehaviour
                 if (hit.collider.CompareTag("PickUp"))
                 {
                     // Поднимаем объект
+                    soundPick.Play();
                     carriedObject = hit.collider.gameObject;
                     carriedObject.GetComponent<Rigidbody>().isKinematic = true;
                     carriedObject.transform.parent = handTransform;
