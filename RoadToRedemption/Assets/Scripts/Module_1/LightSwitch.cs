@@ -17,8 +17,8 @@ public class LightSwitch : MonoBehaviour, IInterectable
 
     public string GetDescription()
     {
-        if (isOn) return "Нажмите [E] для <color=red>выключения</color> света";
-        return "Нажмите [E] для <color=green>включения</color> света";
+        if (isOn) return "Нажмите для <color=red>выключения</color> света";
+        return "Нажмите для <color=green>включения</color> света";
     }
 
     public void Interact()

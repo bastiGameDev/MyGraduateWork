@@ -18,8 +18,8 @@ public class Cheast : MonoBehaviour, IInterectable
 
     public string GetDescription()
     {
-        if (isOpen) return "Нажмите [E] для <color=red>закрытия</color> ящика";
-        return "Нажмите [E] для <color=green>открытия</color> ящика";
+        if (isOpen) return "Нажмите для <color=red>закрытия</color> ящика";
+        return "Нажмите для <color=green>открытия</color> ящика";
     }
 
     public void Interact()

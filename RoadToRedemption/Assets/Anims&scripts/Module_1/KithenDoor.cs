@@ -18,8 +18,8 @@ public class KithenDoor : MonoBehaviour, IInterectable
 
     public string GetDescription()
     {
-        if (isOpen) return "Нажмите [E] для <color=red>закрытия</color> дверцы";
-        return "Нажмите [E] для <color=green>открытия</color> дверцы";
+        if (isOpen) return "Нажмите для <color=red>закрытия</color> дверцы";
+        return "Нажмите для <color=green>открытия</color> дверцы";
     }
 
     public void Interact()

@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
             hitSomething = true;
             interactionText.text = interectable.GetDescription();
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                interectable.Interact();
             }
