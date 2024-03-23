@@ -18559,27 +18559,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.83846086, y: 2.5, z: 0.12142029}
   m_Center: {x: 0.41940954, y: 0, z: 0}
---- !u!65 &8301768052013608066
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8683518447807650241}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9233577, y: 0.0588544, z: 0.94926864}
-  m_Center: {x: 0.0000038146977, y: 0.7849591, z: 2.7105048e-20}
 --- !u!1 &8314456241193438381
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,7 +19060,7 @@ GameObject:
   - component: {fileID: 3130730539285592258}
   - component: {fileID: 3959228341682492936}
   - component: {fileID: 6494839701392183319}
-  - component: {fileID: 8301768052013608066}
+  - component: {fileID: 8683518447807650242}
   m_Layer: 0
   m_Name: PFB_Stove
   m_TagString: Untagged
@@ -19089,6 +19068,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
+--- !u!64 &8683518447807650242
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8683518447807650241}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 22ec64bba89e94704b5b0eeee5767c9c, type: 3}
 --- !u!114 &8684678490449607658
 MonoBehaviour:
   m_ObjectHideFlags: 0
