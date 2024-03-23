@@ -4661,7 +4661,7 @@ Transform:
   m_GameObject: {fileID: 1927658328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.010000229, y: -0.655, z: 1.422}
+  m_LocalPosition: {x: -0.010000229, y: -0.36, z: 1.422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17684,6 +17684,7 @@ GameObject:
   - component: {fileID: 5898441667395600581}
   - component: {fileID: 2954357614629363302}
   - component: {fileID: 4733405041175655163}
+  - component: {fileID: 7827421669600888604}
   m_Layer: 0
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -17691,6 +17692,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7827421669600888604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827421669600888603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fef408003821fb45bce967f8fbe55d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handTransform: {fileID: 1927658329}
+  pickupDistance: 5
 --- !u!64 &7855002567694263515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19548,7 +19563,6 @@ GameObject:
   - component: {fileID: 8449276883125740501}
   - component: {fileID: 3427195790558783351}
   - component: {fileID: 1763425772026189210}
-  - component: {fileID: 9223338314936083174}
   m_Layer: 0
   m_Name: First Person Controller Minimal
   m_TagString: Untagged
@@ -19556,20 +19570,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9223338314936083174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9223338314936083173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fef408003821fb45bce967f8fbe55d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  handTransform: {fileID: 1927658329}
-  pickupDistance: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
