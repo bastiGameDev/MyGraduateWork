@@ -37,7 +37,7 @@ public class SecondSceneController : MonoBehaviour
         
         environment.Pause();
         
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         
         creepyMusic.Play();
         
