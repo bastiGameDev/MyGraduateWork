@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PickUpObject : MonoBehaviour
@@ -7,6 +8,8 @@ public class PickUpObject : MonoBehaviour
 
     [SerializeField] private float pickupDistance = 5f; // Максимальное расстояние для подбора объекта
     [SerializeField] private AudioSource soundPick;
+    
+   // [SerializeField] private TextMeshProUGUI interactionText;
 
     void Update()
     {
@@ -17,6 +20,9 @@ public class PickUpObject : MonoBehaviour
             // Используем pickupDistance вместо жестко заданного значения
             if (Physics.Raycast(transform.position, transform.forward, out hit, pickupDistance))
             {
+                //string objectName = hit.collider.gameObject.name;
+                //interactionText.text = objectName;
+                
                 if (hit.collider.CompareTag("PickUp"))
                 {
                     // Поднимаем объект
