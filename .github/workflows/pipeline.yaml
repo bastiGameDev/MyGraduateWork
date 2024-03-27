@@ -13,10 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Unity Editor
-        run: |
-          ./UnityHub.AppImage install --batchmode --platform linux --version 2020.3.26f1 --components "Unity"
-
       - name: Check style project
         run: |
-          ./UnityHub.AppImage run -- --projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
+          unity-editor -batchmode -projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
