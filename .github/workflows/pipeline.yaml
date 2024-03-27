@@ -26,4 +26,4 @@ jobs:
 
       - name: Check code style
         run: |
-          dotnet stylecop.unity -p ./RoadToRedemption
+          dotnet stylecop.unity -p .
