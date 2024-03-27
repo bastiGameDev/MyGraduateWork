@@ -16,7 +16,7 @@ jobs:
       - name: Set up Unity
         uses: game-ci/setup-unity@v1
         with:
-          unity-version: '2020.3.26f1'  
+          unity-version: '2022.3.16f1'  
 
       - name: Cache Unity dependencies
         uses: actions/cache@v2
