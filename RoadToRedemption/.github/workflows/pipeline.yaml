@@ -1,0 +1,39 @@
+name: Unity_CSharp_Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Unity
+        uses: game-ci/setup-unity@v1
+        with:
+          unity-version: '2020.3.26f1'  
+
+      - name: Cache Unity dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/Library/Unity/Cache
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/Packages/packages-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-unity-
+
+      - name: Install Unity dependencies
+        run: |
+          unity-install-cli --version 1.2.3  
+          unity-install-packages
+
+      - name: Build Unity project
+        run: unity-build --buildTarget StandaloneOSX --executeMethod BuildScript.Build --projectPath ./path_to_your_project
+
+      - name: Run Unity tests
+        run: unity-test --projectPath ./path_to_your_project --editorLocation unity
+
