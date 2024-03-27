@@ -13,16 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Unity
-        uses: actions/setup-unity@v1
-        with:
-          unityVersion: '2020.3.26f1'
-          components: 'unity,webgl,android'
-          license: '${{ secrets.UNITY_LICENSE }}'
+      - name: Install Unity Hub
+        run: |
+          wget -nv https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage -O UnityHub.AppImage
+          chmod +x UnityHub.AppImage
 
-      - name: Install Code Analysis tools
-        run: dotnet tool install -g microsoft.codeanalysis.analyzers
+      - name: Install Unity Editor
+        run: |
+          ./UnityHub.AppImage install --batchmode --platform linux --version 2020.3.26f1 --components "Unity"
 
       - name: Check style project
         run: |
-          unity-editor -batchmode -projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
+          ./UnityHub.AppImage run -- --projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
