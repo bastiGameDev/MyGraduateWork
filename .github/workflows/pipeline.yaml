@@ -1,4 +1,4 @@
-name: Unity_CSharp_Checkstyle
+name: Unity_CSharp_StyleCheck
 
 on:
   push:
@@ -6,13 +6,24 @@ on:
       - main
 
 jobs:
-  checkstyle_project:
+  style_check:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check style project
+      - name: Set up Unity
+        uses: actions/setup-unity@v1
+        with:
+          unityVersion: '2020.3.26f1'
+          components: 'unity,webgl,android'
+          license: '${{ secrets.UNITY_LICENSE }}'
+
+      - name: Install StyleCop.Unity
         run: |
-          unity-editor -batchmode -projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
+          dotnet tool install -g StyleCop.Unity.Analyzers
+
+      - name: Check code style
+        run: |
+          dotnet stylecop.unity -p ./RoadToRedemption
