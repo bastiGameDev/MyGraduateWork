@@ -1,4 +1,4 @@
-name: Unity_CSharp_Pipeline
+name: Unity_CSharp_Checkstyle
 
 on:
   push:
@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  build_and_test:
-    runs-on: macos-latest
+  checkstyle_project:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -16,24 +16,13 @@ jobs:
       - name: Set up Unity
         uses: actions/setup-unity@v1
         with:
-          unity-version: '2022.3.16f1'  
+          unityVersion: '2020.3.26f1'
+          components: 'unity,webgl,android'
+          license: '${{ secrets.UNITY_LICENSE }}'
 
-      - name: Cache Unity dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/Library/Unity/Cache
-          key: ${{ runner.os }}-unity-${{ hashFiles('**/Packages/packages-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-unity-
+      - name: Install Code Analysis tools
+        run: dotnet tool install -g microsoft.codeanalysis.analyzers
 
-      - name: Install Unity dependencies
+      - name: Check style project
         run: |
-          unity-install-cli --version 1.2.3  
-          unity-install-packages
-
-      - name: Build Unity project
-        run: unity-build --buildTarget StandaloneOSX --executeMethod BuildScript.Build --projectPath ./path_to_your_project
-
-      - name: Run Unity tests
-        run: unity-test --projectPath ./path_to_your_project --editorLocation unity
-
+          unity-editor -batchmode -projectPath ./path_to_your_project -executeMethod BuildScript.RunCodeAnalysis -quit
