@@ -13,11 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Unity Hub
-        run: |
-          wget -nv https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage -O UnityHub.AppImage
-          chmod +x UnityHub.AppImage
-
       - name: Install Unity Editor
         run: |
           ./UnityHub.AppImage install --batchmode --platform linux --version 2020.3.26f1 --components "Unity"
