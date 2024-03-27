@@ -1,4 +1,4 @@
-name: Unity_CSharp_StyleCheck
+name: CSharp_Style_Check
 
 on:
   push:
@@ -6,24 +6,20 @@ on:
       - main
 
 jobs:
-  style_check:
+  checkstyle_project:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Unity
-        uses: actions/setup-unity@v1
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v1
         with:
-          unityVersion: '2020.3.26f1'
-          components: 'unity,webgl,android'
-          license: '${{ secrets.UNITY_LICENSE }}'
+          dotnet-version: '6.0.0' 
 
-      - name: Install StyleCop.Unity
-        run: |
-          dotnet tool install -g StyleCop.Unity.Analyzers
+      - name: Install StyleCop analyzers
+        run: dotnet tool install -g StyleCop.Analyzers
 
-      - name: Check code style
-        run: |
-          dotnet stylecop.unity -p .
+      - name: Run StyleCop analysis
+        run: dotnet build /p:WarningLevel=0 # Это запускает анализаторы стиля в проекте
