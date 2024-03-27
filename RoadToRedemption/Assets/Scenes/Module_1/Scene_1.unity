@@ -734,6 +734,88 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.7147338, y: 0.82060146, z: 0.77234805}
   m_Center: {x: 0.00074350834, y: 0.37237167, z: 0.38200837}
+--- !u!1 &166646821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166646824}
+  - component: {fileID: 166646822}
+  - component: {fileID: 166646825}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: PickUp
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!54 &166646822
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166646821}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &166646824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166646821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0000013709068, y: -0, z: 0.0000004214688, w: 1}
+  m_LocalPosition: {x: -17.6889, y: 1.328, z: 42.326}
+  m_LocalScale: {x: 0.09235042, y: 0.09235045, z: 0.09235045}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7941898515160363861}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &166646825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166646821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1906533, y: 2.009492, z: 2.5233488}
+  m_Center: {x: -0.59532714, y: -0.50474495, z: -0.03345347}
 --- !u!1 &177483330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8140,8 +8222,6 @@ GameObject:
   - component: {fileID: 7941898515160363861}
   - component: {fileID: 1014886473681939725}
   - component: {fileID: 4567800565812439345}
-  - component: {fileID: 7941898515160363862}
-  - component: {fileID: 7941898515160363863}
   m_Layer: 0
   m_Name: Teapot
   m_TagString: PickUp
@@ -11685,7 +11765,7 @@ Transform:
   m_GameObject: {fileID: 2114727968592228836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003, y: -0.2, z: 1.144}
+  m_LocalPosition: {x: 0.003, y: -0.2, z: 0.912}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17929,62 +18009,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947126106445213927}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0000013709068, y: -0, z: 0.0000004214688, w: 1}
-  m_LocalPosition: {x: -17.683, y: 1.155, z: 42.326}
-  m_LocalScale: {x: 0.09235042, y: 0.09235045, z: 0.09235045}
+  m_LocalRotation: {x: 0.00055471493, y: 0.7071066, z: 0.0005541189, w: 0.7071066}
+  m_LocalPosition: {x: 0.219, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &7941898515160363862
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947126106445213927}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &7941898515160363863
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947126106445213927}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2841761591643693705, guid: b59046021c35a7d4e994a324b32312b9, type: 3}
+  m_Father: {fileID: 166646824}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0.09}
 --- !u!4 &7952192964894525597
 Transform:
   m_ObjectHideFlags: 0
@@ -19074,8 +19105,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!64 &8683518447807650242
-MeshCollider:
+--- !u!65 &8683518447807650242
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19092,10 +19123,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 22ec64bba89e94704b5b0eeee5767c9c, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.9233577, y: 0.08668232, z: 0.94926864}
+  m_Center: {x: 0.0000038146977, y: 0.8871019, z: 2.7105048e-20}
 --- !u!114 &8684678490449607658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19695,4 +19725,4 @@ SceneRoots:
   - {fileID: 1329911124}
   - {fileID: 920290331}
   - {fileID: 4000010671356845}
-  - {fileID: 7941898515160363861}
+  - {fileID: 166646824}
