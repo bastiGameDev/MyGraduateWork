@@ -1,4 +1,4 @@
-name: CSharp_Style_Check
+name: Unity_CSharp_StyleCheck
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  checkstyle_project:
+  style_check:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,10 +16,12 @@ jobs:
       - name: Install .NET SDK
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.0' 
+          dotnet-version: '6.0.0'
 
-      - name: Install StyleCop analyzers
-        run: dotnet tool install -g StyleCop.Analyzers
+      - name: Install StyleCop.Unity
+        run: |
+          dotnet tool install -g StyleCop.Unity.Analyzers
 
-      - name: Run StyleCop analysis
-        run: dotnet build /p:WarningLevel=0 # Это запускает анализаторы стиля в проекте
+      - name: Check code style
+        run: |
+          dotnet stylecop.unity -p . 
