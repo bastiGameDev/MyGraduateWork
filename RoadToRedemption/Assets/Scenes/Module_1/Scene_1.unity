@@ -2215,6 +2215,80 @@ Transform:
   - {fileID: 217895853}
   m_Father: {fileID: 1439035032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &568743434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 568743437}
+  - component: {fileID: 568743436}
+  - component: {fileID: 568743435}
+  m_Layer: 0
+  m_Name: Rakovina
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &568743435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568743434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565419a310f7fd74ab05e9b5b1a60cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredDishNames:
+  - coffee-cup1
+  - coffee-cup2
+  - coffee-cup3
+  - coffee-cup4
+  - PLATES
+  - PLATES (1)
+  - PLATES (2)
+--- !u!65 &568743436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568743434}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &568743437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568743434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.776, y: 1.026, z: 38.758}
+  m_LocalScale: {x: 0.5146737, y: 0.25753, z: 0.50851876}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579894296
 GameObject:
   m_ObjectHideFlags: 0
@@ -14035,7 +14109,7 @@ Transform:
   m_GameObject: {fileID: 1669253537935695187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.298, y: 0.120125294, z: 43.722}
+  m_LocalPosition: {x: -12.211, y: 0.120125294, z: 32.218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16308,7 +16382,7 @@ Transform:
   m_GameObject: {fileID: 5169493404450766389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.538, y: 1.0928962, z: 40.595}
+  m_LocalPosition: {x: -15.023, y: 1.0928962, z: 41.203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20788,7 +20862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6469654232431121519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -24234,7 +24308,6 @@ SceneRoots:
   - {fileID: 424769536}
   - {fileID: 8992664889991638270}
   - {fileID: 3797200131620212751}
-  - {fileID: 8050089121359707783}
   - {fileID: 1675753327}
   - {fileID: 1727602926}
   - {fileID: 1983285177}
@@ -24257,3 +24330,5 @@ SceneRoots:
   - {fileID: 1004309984}
   - {fileID: 1792713436}
   - {fileID: 801697567}
+  - {fileID: 8050089121359707783}
+  - {fileID: 568743437}
