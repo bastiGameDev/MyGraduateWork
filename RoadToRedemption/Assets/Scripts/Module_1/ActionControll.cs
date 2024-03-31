@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActionControll : MonoBehaviour
 {
@@ -7,9 +8,27 @@ public class ActionControll : MonoBehaviour
     private bool _isCompletedThirdScript;
     private bool _isCompletedFourthScript;
 
+    private bool _isFoundTaskImage;
+    
+    public Image imageTask;
+
     private void FixedUpdate()
     {
-        
+       
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            imageTask.gameObject.SetActive(true);
+        }
+        else
+        {
+            imageTask.gameObject.SetActive(false);
+        }
+    }
+
+    public bool IsFoundTaskImage
+    {
+        get => _isFoundTaskImage;
+        set => _isFoundTaskImage = value;
     }
 
     public bool IsCompletedFirstScript
