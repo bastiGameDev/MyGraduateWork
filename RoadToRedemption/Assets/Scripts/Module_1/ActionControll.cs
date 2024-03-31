@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ActionControll : MonoBehaviour
 {
-    [SerializeField] private bool _isCompletedFirstScript;
+    private bool _isCompletedFirstScript;
     private bool _isCompletedSecondScript;
     private bool _isCompletedThirdScript;
     private bool _isCompletedFourthScript;

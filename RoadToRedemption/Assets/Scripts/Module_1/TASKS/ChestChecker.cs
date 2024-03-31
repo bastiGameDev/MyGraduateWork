@@ -17,10 +17,8 @@ public class ChestChecker : MonoBehaviour
             soundCompleted.Play();
 
             other.gameObject.tag = "Untagged";
-            
-            
-            
-            
+
+            actionControll.IsCompletedSecondScript = true;
         }
     }
 }

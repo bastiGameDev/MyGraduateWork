@@ -23,10 +23,17 @@ public class StoveChecker : MonoBehaviour
             other.gameObject.tag = "Untagged";
             
             gazStove.Play();
-            
-            
+
+            actionControll.IsCompletedThirdScript = true;
         }
     }
 
+    private IEnumerator StoveWaiter()
+    {
+        //Здесь голос что надо подождать чай
+        
+        //Затухание экрана и переход в гаржаи   
+        yield return new WaitForSeconds(45);
+    }
 
 }
