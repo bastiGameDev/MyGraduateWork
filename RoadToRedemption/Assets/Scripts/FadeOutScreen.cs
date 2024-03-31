@@ -9,7 +9,7 @@ public class FadeOutScreen : MonoBehaviour
 
     private Image screenImage; // Ссылка на компонент Image
 
-    private void Start()
+    public void StartFadeOut()
     {
         // Проверяем, есть ли ссылка на объект экрана
         if (screenObject == null)
