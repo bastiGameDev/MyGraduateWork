@@ -34,6 +34,31 @@ public class FadeOutScreen : MonoBehaviour
         StartCoroutine(FadeOutScreenCoroutine());
     }
 
+    public void StartFadeIn()
+    {
+        // Проверяем, есть ли ссылка на объект экрана
+        if (screenObject == null)
+        {
+            // Если нет, выводим сообщение об ошибке
+            Debug.LogError("Screen Object not assigned. Assign the screen GameObject manually.");
+            return;
+        }
+
+        // Получаем компонент Image с объекта экрана
+        screenImage = screenObject.GetComponent<Image>();
+
+        // Проверяем, есть ли компонент Image
+        if (screenImage == null)
+        {
+            // Если нет, выводим сообщение об ошибке
+            Debug.LogError("Image component not found on the screen GameObject.");
+            return;
+        }
+
+        // Запускаем корутину для анимации проявления экрана
+        StartCoroutine(FadeInScreenCoroutine());
+    }
+
     private IEnumerator FadeOutScreenCoroutine()
     {
         float timer = 0f;
@@ -49,5 +74,22 @@ public class FadeOutScreen : MonoBehaviour
 
         // Убеждаемся, что прозрачность установлена в 1 после завершения анимации
         screenImage.color = new Color(0f, 0f, 0f, 1f);
+    }
+
+    private IEnumerator FadeInScreenCoroutine()
+    {
+        float timer = fadeDuration;
+
+        // Постепенно уменьшаем прозрачность экрана до 0 (полная прозрачность)
+        while (timer > 0f)
+        {
+            float alpha = Mathf.Lerp(0f, 1f, timer / fadeDuration);
+            screenImage.color = new Color(0f, 0f, 0f, alpha); // Черный цвет
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        // Убеждаемся, что прозрачность установлена в 0 после завершения анимации
+        screenImage.color = new Color(0f, 0f, 0f, 0f);
     }
 }

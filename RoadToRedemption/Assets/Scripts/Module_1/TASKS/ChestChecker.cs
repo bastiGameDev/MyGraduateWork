@@ -5,6 +5,7 @@ public class ChestChecker : MonoBehaviour
     [SerializeField] private AudioSource soundCompleted;
 
     [SerializeField] private ActionControll actionControll;
+    [SerializeField] private AudioSource voiceover_6;
     private void Awake()
     {
         ActionControll actionControll = new ActionControll();
@@ -19,6 +20,8 @@ public class ChestChecker : MonoBehaviour
             other.gameObject.tag = "Untagged";
 
             actionControll.IsCompletedSecondScript = true;
+            
+            voiceover_6.Play();
         }
     }
 }

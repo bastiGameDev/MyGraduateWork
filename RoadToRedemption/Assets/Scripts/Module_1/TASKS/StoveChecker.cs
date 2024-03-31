@@ -9,7 +9,6 @@ public class StoveChecker : MonoBehaviour
     [SerializeField] private AudioSource soundCompleted;
 
     [SerializeField] private ActionControll actionControll;
-    [SerializeField] private FadeOutScreen _fadeOutScreen;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,7 +34,9 @@ public class StoveChecker : MonoBehaviour
         //Затухание экрана и переход в гаржаи   
         yield return new WaitForSeconds(10);
         
-        _fadeOutScreen.StartFadeOut();
+        actionControll.EndingTasks();
+
+        
     }
 
 }

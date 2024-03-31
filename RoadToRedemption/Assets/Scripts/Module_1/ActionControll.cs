@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,10 @@ public class ActionControll : MonoBehaviour
     private bool _isFoundTaskImage;
     
     public Image imageTask;
+    
+    [SerializeField] private ActionControll actionControll;
+    [SerializeField] private FadeOutScreen _fadeOutScreen;
+    [SerializeField] private GameObject player;
 
     private void FixedUpdate()
     {
@@ -23,6 +28,31 @@ public class ActionControll : MonoBehaviour
         {
             imageTask.gameObject.SetActive(false);
         }
+    }
+
+    public void EndingTasks()
+    {
+        StartCoroutine(TeleportPlayerTo(-1.14999998f, 0.120125294f, 105.279999f));
+    }
+
+    public void EndingGarage()
+    {
+        StartCoroutine(TeleportPlayerTo(-14.4099998f,0.120125294f,42.1199989f));
+    }
+    
+    private IEnumerator TeleportPlayerTo(float x, float y, float z)
+    {
+        Debug.Log("Start cs");
+        _fadeOutScreen.StartFadeOut();
+        
+        yield return new WaitForSeconds(2.1f);
+        
+        player.transform.position = new Vector3(x, y, z);
+        
+        yield return new WaitForSeconds(1f);
+        
+        _fadeOutScreen.StartFadeIn();
+
     }
 
     public bool IsFoundTaskImage
@@ -54,4 +84,6 @@ public class ActionControll : MonoBehaviour
         get => _isCompletedFourthScript;
         set => _isCompletedFourthScript = value;
     }
+
+    
 }
