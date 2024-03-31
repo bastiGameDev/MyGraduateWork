@@ -467,6 +467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionControll: {fileID: 1309188209}
+  bedMarker: {fileID: 1439114667}
+  teapot: {fileID: 166646821}
 --- !u!65 &60304859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6690,7 +6692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1439114668
 Transform:
   m_ObjectHideFlags: 0
