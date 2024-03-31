@@ -3,8 +3,16 @@ using System.Collections.Generic;
 
 public class DishChecker : MonoBehaviour
 {
-    private HashSet<string> dishesInSink = new HashSet<string>(); // Множество для хранения имен объектов посуды в раковине
+    private HashSet<string> _dishesInSink = new HashSet<string>(); // Множество для хранения имен объектов посуды в раковине
     public List<string> requiredDishNames; // Список имен необходимых предметов посуды
+
+    [SerializeField] private ActionControll actionControll;
+    [SerializeField] private AudioSource soundCompleted;
+
+    private void Awake()
+    {
+        ActionControll actionControll = new ActionControll();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,7 +20,7 @@ public class DishChecker : MonoBehaviour
         string dishName = other.gameObject.name;
         if (requiredDishNames.Contains(dishName))
         {
-            dishesInSink.Add(dishName);
+            _dishesInSink.Add(dishName);
             CheckRequiredDishes();
         }
     }
@@ -23,7 +31,7 @@ public class DishChecker : MonoBehaviour
         string dishName = other.gameObject.name;
         if (requiredDishNames.Contains(dishName))
         {
-            dishesInSink.Remove(dishName);
+            _dishesInSink.Remove(dishName);
             CheckRequiredDishes();
         }
     }
@@ -34,7 +42,7 @@ public class DishChecker : MonoBehaviour
         bool allRequiredDishesInSink = true;
         foreach (string requiredDishName in requiredDishNames)
         {
-            if (!dishesInSink.Contains(requiredDishName))
+            if (!_dishesInSink.Contains(requiredDishName))
             {
                 allRequiredDishesInSink = false;
                 break;
@@ -45,7 +53,11 @@ public class DishChecker : MonoBehaviour
         if (allRequiredDishesInSink)
         {
             Debug.Log("Все необходимые предметы посуды находятся в раковине!");
-            // Ваше действие здесь
+            
+            soundCompleted.Play();
+
+            actionControll.IsCompletedFirstScript = true;
+
         }
     }
 }
