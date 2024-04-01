@@ -22,6 +22,9 @@ public class ChestChecker : MonoBehaviour
             actionControll.IsCompletedSecondScript = true;
             
             voiceover_6.Play();
+            
+            actionControll.IsCompletedThirdScript = true;
+            actionControll.RefreshStates();
         }
     }
 }

@@ -12,6 +12,8 @@ public class SecondSceneController : MonoBehaviour
     [SerializeField] private GameObject lights;
     
     [SerializeField] private AudioSource environment;
+    [SerializeField] private FadeOutScreen _fadeOutScreen;
+
 
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class SecondSceneController : MonoBehaviour
 
     void Start()
     {
+        _fadeOutScreen.StartFadeIn();
         StartCoroutine(ScaryFold());
     }
 

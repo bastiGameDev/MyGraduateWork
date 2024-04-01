@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2679,7 +2679,7 @@ GameObject:
   - component: {fileID: 568743436}
   - component: {fileID: 568743435}
   m_Layer: 0
-  m_Name: Rakovina
+  m_Name: Dish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6306,9 +6306,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTask: {fileID: 229078023}
+  player: {fileID: 1669253537935695187}
   actionControll: {fileID: 1309188209}
   _fadeOutScreen: {fileID: 1309188211}
-  player: {fileID: 1669253537935695187}
+  colliderFirstTask: {fileID: 568743434}
+  colliderSecondTask: {fileID: 1242368936}
+  colliderThirdTask: {fileID: 1499109087}
 --- !u!4 &1309188210
 Transform:
   m_ObjectHideFlags: 0
@@ -6692,7 +6695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1439114668
 Transform:
   m_ObjectHideFlags: 0
@@ -8776,8 +8779,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 568743437}
-  - {fileID: 1499109088}
   - {fileID: 1242368937}
+  - {fileID: 1499109088}
   - {fileID: 1439114668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

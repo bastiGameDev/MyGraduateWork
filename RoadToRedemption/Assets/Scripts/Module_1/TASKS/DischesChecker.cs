@@ -56,7 +56,8 @@ public class DishChecker : MonoBehaviour
             
             soundCompleted.Play();
 
-            actionControll.IsCompletedFirstScript = true;
+            actionControll.IsCompletedSecondScript = true;
+            actionControll.RefreshStates();
 
         }
     }

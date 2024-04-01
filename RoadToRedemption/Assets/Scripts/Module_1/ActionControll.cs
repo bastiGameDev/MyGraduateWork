@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,10 +13,43 @@ public class ActionControll : MonoBehaviour
     private bool _isFoundTaskImage;
     
     public Image imageTask;
+    [SerializeField] private GameObject player;
     
+    [Header("Scripts")]
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private FadeOutScreen _fadeOutScreen;
-    [SerializeField] private GameObject player;
+
+
+
+    [Header("Colliders")] 
+    [SerializeField] private GameObject colliderFirstTask;
+    [SerializeField] private GameObject colliderSecondTask;
+    [SerializeField] private GameObject colliderThirdTask;
+
+    
+
+    private void Awake()
+    {
+        IsCompletedFirstScript = true;
+        IsCompletedSecondScript = false;
+        IsCompletedThirdScript = false;
+        IsCompletedFourthScript = false;
+    }
+
+    public void RefreshStates()
+    {
+        colliderFirstTask.gameObject.SetActive(IsCompletedFirstScript);
+        colliderSecondTask.gameObject.SetActive(IsCompletedSecondScript);
+        colliderThirdTask.gameObject.SetActive(IsCompletedThirdScript);
+    }
+
+    private void Start()
+    {
+        //
+        //ЗДЕСЬ СДЕЛАТЬ ЧЕРЕЗ ПЛЕЕРПРЕФС PLAYERPRESF сохранения
+        //
+        RefreshStates();
+    }
 
     private void FixedUpdate()
     {
