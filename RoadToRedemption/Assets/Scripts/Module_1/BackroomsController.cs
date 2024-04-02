@@ -35,7 +35,6 @@ public class BackroomsController : MonoBehaviour
         yield return new WaitForSeconds(10);
 
         player.GetComponent<FirstPersonMovement>().enabled = false;
-        GetComponent<Camera>().GetComponent<FirstPersonLook>().enabled = false;
         
         soundDie.Play();
         _fadeOutScreen.StartFadeOut();
@@ -43,8 +42,5 @@ public class BackroomsController : MonoBehaviour
         yield return new WaitForSeconds(7);
     }
     
-    private void RotateDown()
-    {
-        transform.rotation = Quaternion.LookRotation(-Vector3.up);
-    }
+    
 }

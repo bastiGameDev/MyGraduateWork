@@ -896,9 +896,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeOutScreen: {fileID: 456203751}
-  player: {fileID: 0}
+  player: {fileID: 2313582999047701850}
   imageTask: {fileID: 1873034174391907642}
-  cameraObject: {fileID: 0}
+  cameraObject: {fileID: 7996645240311073894}
   soundDie: {fileID: 1288953378}
 --- !u!114 &456203751
 MonoBehaviour:
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d3bf447e5993d488dd23e6e2039183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 7
+  fadeDuration: 5
   screenObject: {fileID: 3872861211583199971}
 --- !u!1 &474219219
 GameObject:
