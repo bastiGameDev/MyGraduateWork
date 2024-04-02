@@ -10,11 +10,14 @@ public class BackroomsController : MonoBehaviour
     public Image imageTask;
     public GameObject cameraObject;
     [SerializeField] private AudioSource soundDie;
+    [SerializeField] private GameObject soundBoxEnviroment;
+    [SerializeField] private AudioSource musicEnd;
     
     void Start()
-    {
-       // _fadeOutScreen.StartFadeOut();
-       StartCoroutine(EndGame());
+    { 
+        _fadeOutScreen.StartFadeIn();
+        
+        StartCoroutine(EndGame());
     }
     
     private void FixedUpdate()
@@ -32,14 +35,17 @@ public class BackroomsController : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         player.GetComponent<FirstPersonMovement>().enabled = false;
         
         soundDie.Play();
         _fadeOutScreen.StartFadeOut();
         
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(9);
+        soundBoxEnviroment.gameObject.SetActive(false);
+        
+        musicEnd.Play();
     }
     
     

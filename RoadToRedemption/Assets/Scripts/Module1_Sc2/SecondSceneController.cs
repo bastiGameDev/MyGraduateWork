@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SecondSceneController : MonoBehaviour
 {
     [SerializeField] private GameObject flyObjects;
     [SerializeField] private AudioSource soundScary;
 
-    [SerializeField] private AudioSource creepyMusic;
     [SerializeField] private GameObject lights;
     
     [SerializeField] private AudioSource environment;
@@ -40,11 +40,13 @@ public class SecondSceneController : MonoBehaviour
         
         environment.Pause();
         
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         
-        creepyMusic.Play();
-        
-        
-        
+        _fadeOutScreen.StartFadeOut();
+
+        yield return new WaitForSeconds(3);
+
+        SceneManager.LoadScene("Scene_3");
+
     }
 }
