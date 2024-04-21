@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
-
 public class PlayerInteraction : MonoBehaviour
 {
    [SerializeField] private Camera mainCam;

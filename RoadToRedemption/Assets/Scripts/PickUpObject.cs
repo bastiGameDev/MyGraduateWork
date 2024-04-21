@@ -13,22 +13,19 @@ public class PickUpObject : MonoBehaviour
 
     void Update()
     {
-        // Если объект не поднимается и нажата кнопка для подбора объекта
         if (carriedObject == null && Input.GetKeyDown(KeyCode.Mouse0))
         {
             RaycastHit hit;
-            // Используем pickupDistance вместо жестко заданного значения
+            
             if (Physics.Raycast(transform.position, transform.forward, out hit, pickupDistance))
             {
-                //string objectName = hit.collider.gameObject.name;
-                //interactionText.text = objectName;
-                
+
                 if (hit.collider.CompareTag("PickUp"))
                 {
-                    // Поднимаем объект
+                    Debug.Log("Предмет подобран");
                     soundPick.Play();
                     carriedObject = hit.collider.gameObject;
-                    // Отключаем компонент коллайдера объекта
+                    
                     Collider objCollider = carriedObject.GetComponent<Collider>();
                     if (objCollider != null)
                         objCollider.enabled = false;

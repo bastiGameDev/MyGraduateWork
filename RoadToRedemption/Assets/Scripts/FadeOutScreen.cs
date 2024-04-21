@@ -4,33 +4,27 @@ using System.Collections;
 
 public class FadeOutScreen : MonoBehaviour
 {
-    public float fadeDuration = 2f; // Длительность анимации в секундах
-    public GameObject screenObject; // Ссылка на объект с компонентом Image (ваш экран)
+    public float fadeDuration = 2f; 
+    public GameObject screenObject; 
 
-    private Image screenImage; // Ссылка на компонент Image
+    private Image screenImage; 
 
     public void StartFadeOut()
     {
-        // Проверяем, есть ли ссылка на объект экрана
         if (screenObject == null)
         {
-            // Если нет, выводим сообщение об ошибке
             Debug.LogError("Screen Object not assigned. Assign the screen GameObject manually.");
             return;
         }
-
-        // Получаем компонент Image с объекта экрана
+        
         screenImage = screenObject.GetComponent<Image>();
 
-        // Проверяем, есть ли компонент Image
         if (screenImage == null)
         {
-            // Если нет, выводим сообщение об ошибке
             Debug.LogError("Image component not found on the screen GameObject.");
             return;
         }
 
-        // Запускаем корутину для анимации затухания экрана
         StartCoroutine(FadeOutScreenCoroutine());
     }
 

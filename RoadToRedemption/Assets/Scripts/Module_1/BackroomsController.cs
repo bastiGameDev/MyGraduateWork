@@ -35,7 +35,7 @@ public class BackroomsController : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(65);//
 
         player.GetComponent<FirstPersonMovement>().enabled = false;
         

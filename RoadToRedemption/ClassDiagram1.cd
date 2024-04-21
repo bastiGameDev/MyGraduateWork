@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChangeTextColorOnHover">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAACAAEAAAAAAEAAAAAAAgAAAAAAAgAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\ChangeTextColorOnHover.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MainMenuController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIAAAAAAAAACBAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\MainMenuController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FridgeChecker">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\Backrooms\Tasks\FridgeChecker.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HouseChecker">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAgCAAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\Backrooms\HouseChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BedChecker">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\Bed_end\BedChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GarageChecker">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAQAAAQAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\Garages\GarageChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NightmareController">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\Nightmere\NightmareController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChestChecker">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\TASKS\ChestChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishChecker">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgQAAAAAAgAAAAAAAQIAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\TASKS\DischesChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StoveChecker">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAIABAAAAAAAAQAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\TASKS\StoveChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionControll">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAqBAAAAAiEAIAACAQAIAAAAKEAAQIABAAAAQAAgCGI=</HashCode>
+      <FileName>Assets\Scripts\Module_1\ActionControll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BackroomsController">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABABAiAAIABAAQAIAAAAAAAAAAABAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\BackroomsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LightSwitch">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACAAAAAAIAABAAAAIAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Module_1\LightSwitch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FadeOutScreen">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAACECAAAgAAAAAAAAAAAAAAAAQAQA=</HashCode>
+      <FileName>Assets\Scripts\FadeOutScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickUpObject">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAABgA=</HashCode>
+      <FileName>Assets\Scripts\PickUpObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInteraction">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAACAAAAAAAAAAQAAAAAAEAAAAQAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayerInteraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstPersonLook">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAEACAABAAAAAAAAAAAAAAAAAAAAAQAEAAAAAA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\FirstPersonLook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstPersonMovement">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAACAoAAAAAAAAAAQAAAAAAACQAAAAAAAAABAEA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\FirstPersonMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crouch">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAASAEEBAAhAAAEIAAAAAAAAAAIAEAAAACACAA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\Components\Crouch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstPersonAudio">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAKgAEgQwIAhAAABAYAQAQBAAQCAAEIAAFAAQBQCAg=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\Components\FirstPersonAudio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroundCheck">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIIAAAAAAAAIAQAAAEACAAIAAAAAACAAAA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\Components\GroundCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jump">
+    <Position X="4" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIAAAAABAABAAAAAAAIAAAAAAAAAAAAAAAAQAAAEA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\Components\Jump.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoom">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAgAAAECAAAAAAAAAAAAAAAACAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\FPSConroller\Scripts\Components\Zoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cheast">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACAAAAAAIAAAAAAAIAAAAAAAAAAAQCAAAAA=</HashCode>
+      <FileName>Assets\Anims&amp;scripts\Module_1\Cheast.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Door">
+    <Position X="9.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACAAAAAAIAAAAAAAIAAAAAAAAAAAACAAIAA=</HashCode>
+      <FileName>Assets\Anims&amp;scripts\Module_1\Door.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KithenDoor">
+    <Position X="11" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACAAAAAAIgAAAAAAIAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Anims&amp;scripts\Module_1\KithenDoor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IInterectable">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\IInterectable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

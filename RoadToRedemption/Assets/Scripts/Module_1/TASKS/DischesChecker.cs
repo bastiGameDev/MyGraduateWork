@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -27,13 +28,20 @@ public class DishChecker : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        // Проверяем, является ли выходящий объект посудой и удаляем его из коллекции
-        string dishName = other.gameObject.name;
-        if (requiredDishNames.Contains(dishName))
+        try
         {
-            _dishesInSink.Remove(dishName);
-            CheckRequiredDishes();
+            string dishName = other.gameObject.name;
+            if (requiredDishNames.Contains(dishName))
+            {
+                _dishesInSink.Remove(dishName);
+                CheckRequiredDishes();
+            }
         }
+        catch 
+        {
+            Debug.LogError("Error");
+        }
+        
     }
 
     void CheckRequiredDishes()
