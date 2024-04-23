@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -45,5 +46,16 @@ public class MainMenuController : MonoBehaviour
         int randomIndex = Random.Range(0, phrases.Length);
 
         return phrases[randomIndex];
+    }
+
+    public void StartGame()
+    {
+        Debug.Log("Game is starting...");
+        SceneManager.LoadScene("Scene_1");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
