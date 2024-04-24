@@ -9,10 +9,12 @@ public class TypewriterEffectTMP : MonoBehaviour
                              "злоупотреблять алкоголем, курение, и, самое страшное, садиться за руль автомашины в нетрезвом состоянии. Никогда не повторяйте данных действий.";
     private string currentText = "";
     [SerializeField] private TextMeshProUGUI textComponent;
+    [SerializeField] private AudioSource keyboadrEffect;
 
     public void StartWritterText()
     {
         //textComponent = GetComponent<TextMeshProUGUI>();
+        //keyboadrEffect.Play();
         StartCoroutine(ShowText());
     }
 
