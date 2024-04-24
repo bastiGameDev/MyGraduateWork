@@ -56,7 +56,7 @@ public class FadeScreen : MonoBehaviour
         
         _typewriterEffectTMP.StartWritterText();
         
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(12f);
         
         btnStartGameShow.SetActive(true);
         

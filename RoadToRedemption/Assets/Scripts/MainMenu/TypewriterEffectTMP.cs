@@ -5,8 +5,7 @@ using System.Collections;
 public class TypewriterEffectTMP : MonoBehaviour
 {
     public float delay;
-    public string fullText = "\tВ 2020 году парень по имени Дмитрий закончил школу, 9 классов. Аттестат забрал, но подавать документы никуда не стал. Начал вести непристойный образ жизни. Обрёл вредные привычки: " +
-                             "злоупотреблять алкоголем, курение, и, самое страшное, садиться за руль автомашины в нетрезвом состоянии. Никогда не повторяйте данных действий.";
+    public string fullText = "";
     private string currentText = "";
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private AudioSource keyboadrEffect;
