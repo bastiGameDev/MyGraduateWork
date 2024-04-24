@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI phraseText;  
+    [SerializeField] private TextMeshProUGUI phraseText;
+    [SerializeField] private FadeOutScreen _fadeOutScreen;
+
+    [SerializeField] private FadeScreen _fadeScreen;
 
     private string[] phrases = {
         "Все мы не вечные",
@@ -51,11 +54,17 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Game is starting...");
-        SceneManager.LoadScene("Scene_1");
+
+        _fadeScreen.StartFadeOut();
     }
 
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void GameStartAfterTitles()
+    {
+        SceneManager.LoadScene("Scene_1");
     }
 }
