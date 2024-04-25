@@ -1469,6 +1469,7 @@ GameObject:
   - component: {fileID: 166646824}
   - component: {fileID: 166646822}
   - component: {fileID: 166646825}
+  - component: {fileID: 166646826}
   m_Layer: 0
   m_Name: Teapot
   m_TagString: PickUp
@@ -1540,6 +1541,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.1906533, y: 2.009492, z: 2.5233488}
   m_Center: {x: -0.59532714, y: -0.50474495, z: -0.03345347}
+--- !u!114 &166646826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166646821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177483330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2230,18 @@ Transform:
   - {fileID: 234779194}
   m_Father: {fileID: 1019902990}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &397320733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169493404450766387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &424769534
 GameObject:
   m_ObjectHideFlags: 0
@@ -4743,6 +4768,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1044560071}
   m_Mesh: {fileID: 5000035755307806755, guid: ddffba0146d962046b1a73bf00555bab, type: 3}
+--- !u!114 &1073926973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169493404450766385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1117195920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7559,7 +7596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1642457388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8988,6 +9025,7 @@ GameObject:
   - component: {fileID: 23000012332812645}
   - component: {fileID: 33000012430561847}
   - component: {fileID: 33000012430561846}
+  - component: {fileID: 33000012430561848}
   m_Layer: 0
   m_Name: PFB_Lamp_TASK
   m_TagString: PickUp
@@ -9564,6 +9602,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.32933992, y: 0.33732688, z: 0.2437706}
   m_Center: {x: 0.006798774, y: 0.16863993, z: -0.002840042}
+--- !u!114 &33000012430561848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013839262747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &33000012499544150
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18339,6 +18389,7 @@ GameObject:
   - component: {fileID: 5169493404452757745}
   - component: {fileID: 5169493404453757492}
   - component: {fileID: 5169493404453757490}
+  - component: {fileID: 1073926973}
   m_Layer: 0
   m_Name: coffee-cup2
   m_TagString: PickUp
@@ -18359,6 +18410,7 @@ GameObject:
   - component: {fileID: 5169493404452757747}
   - component: {fileID: 909355643}
   - component: {fileID: 909355642}
+  - component: {fileID: 397320733}
   m_Layer: 0
   m_Name: coffee-cup1
   m_TagString: PickUp
@@ -18379,6 +18431,7 @@ GameObject:
   - component: {fileID: 5169493404452757749}
   - component: {fileID: 5169493404453757496}
   - component: {fileID: 5169493404453757494}
+  - component: {fileID: 5169493404453757499}
   m_Layer: 0
   m_Name: coffee-cup4
   m_TagString: PickUp
@@ -18399,6 +18452,7 @@ GameObject:
   - component: {fileID: 5169493404452757751}
   - component: {fileID: 5169493404453757498}
   - component: {fileID: 5169493404453757497}
+  - component: {fileID: 5169493404453757500}
   m_Layer: 0
   m_Name: coffee-cup3
   m_TagString: PickUp
@@ -18813,6 +18867,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: bc8c29201cb724446a7429fabead425c, type: 3}
+--- !u!114 &5169493404453757499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169493404450766389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5169493404453757500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5169493404450766391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a368a423c3c67488ed87f661c67e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5173291491201500016
 GameObject:
   m_ObjectHideFlags: 0
