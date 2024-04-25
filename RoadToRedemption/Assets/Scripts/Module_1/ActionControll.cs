@@ -14,11 +14,14 @@ public class ActionControll : MonoBehaviour
     
     public Image imageTask;
     [SerializeField] private GameObject player;
+    [SerializeField] private AudioSource soundKeyboardEffect;
+    [SerializeField] private GameObject btnStart;
+    [SerializeField] private GameObject startImage;
     
     [Header("Scripts")]
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private FadeOutScreen _fadeOutScreen;
-
+    [SerializeField] private TypewriterEffectTMP typewriterEffectTMP;
 
 
     [Header("Colliders")] 
@@ -45,10 +48,33 @@ public class ActionControll : MonoBehaviour
 
     private void Start()
     {
+        typewriterEffectTMP.StartWritterText();
+        soundKeyboardEffect.Play();
+        
+        while (true)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                startImage.SetActive(false);
+                break;
+            }
+        }
+        
         //
         //ЗДЕСЬ СДЕЛАТЬ ЧЕРЕЗ ПЛЕЕРПРЕФС PLAYERPRESF сохранения
         //
         RefreshStates();
+    }
+    
+    private IEnumerator StartTitlesShow()
+    {
+        Debug.Log("Start coroutine");
+        typewriterEffectTMP.StartWritterText();
+        soundKeyboardEffect.Play();
+        
+        yield return new WaitForSeconds(3f);
+        Cursor.visible = true;
+        btnStart.SetActive(true);
     }
 
     private void FixedUpdate()
@@ -88,6 +114,7 @@ public class ActionControll : MonoBehaviour
         _fadeOutScreen.StartFadeIn();
 
     }
+    
 
     public bool IsFoundTaskImage
     {

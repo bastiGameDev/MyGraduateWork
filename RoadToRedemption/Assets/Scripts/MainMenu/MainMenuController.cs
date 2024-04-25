@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private FadeOutScreen _fadeOutScreen;
 
     [SerializeField] private FadeScreen _fadeScreen;
+    public AudioSource soundClick;
 
     private string[] phrases = {
         "Все мы не вечные",
@@ -53,6 +54,8 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        soundClick.Play();
+        
         Debug.Log("Game is starting...");
 
         _fadeScreen.StartFadeOut();
@@ -60,11 +63,15 @@ public class MainMenuController : MonoBehaviour
 
     public void ExitGame()
     {
+        soundClick.Play();
+        
         Application.Quit();
     }
 
     public void GameStartAfterTitles()
     {
+        soundClick.Play();
+        
         SceneManager.LoadScene("Scene_1");
     }
 }
