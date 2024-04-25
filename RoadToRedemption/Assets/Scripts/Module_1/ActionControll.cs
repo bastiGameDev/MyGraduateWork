@@ -48,9 +48,12 @@ public class ActionControll : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartTitlesShowAfterEnter());
+    }
+    
+    private IEnumerator StartTitlesShowAfterEnter()
+    {
         typewriterEffectTMP.StartWritterText();
-        soundKeyboardEffect.Play();
-        
         while (true)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -58,15 +61,16 @@ public class ActionControll : MonoBehaviour
                 startImage.SetActive(false);
                 break;
             }
+            yield return null;
         }
-        
+    
         //
         //ЗДЕСЬ СДЕЛАТЬ ЧЕРЕЗ ПЛЕЕРПРЕФС PLAYERPRESF сохранения
         //
         RefreshStates();
     }
     
-    private IEnumerator StartTitlesShow()
+    /*private IEnumerator StartTitlesShow()
     {
         Debug.Log("Start coroutine");
         typewriterEffectTMP.StartWritterText();
@@ -75,7 +79,7 @@ public class ActionControll : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Cursor.visible = true;
         btnStart.SetActive(true);
-    }
+    }*/
 
     private void FixedUpdate()
     {

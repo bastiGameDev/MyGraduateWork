@@ -5194,8 +5194,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 283404baf67888f4983352ade54ee879, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 40f1ff15e2c82cf4fab9d124b6ddbf1d, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6522,6 +6522,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageTask: {fileID: 7119379293036732854}
   player: {fileID: 1669253537935695187}
+  soundKeyboardEffect: {fileID: 0}
+  btnStart: {fileID: 0}
+  startImage: {fileID: 1642457387}
   actionControll: {fileID: 1309188209}
   _fadeOutScreen: {fileID: 1309188211}
   typewriterEffectTMP: {fileID: 148175307}
