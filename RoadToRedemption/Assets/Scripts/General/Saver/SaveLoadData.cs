@@ -50,7 +50,14 @@ public class SaveLoadData : MonoBehaviour
         File.WriteAllText(filePath, jsonData);
     }
 
-
+    public void DeleteSaveData()
+    {
+        Debug.Log("Detete data..");
+        if (File.Exists(filePath))
+        {
+            File.Delete(filePath);
+        }
+    }
 
 
     // метод для загрузки данных
