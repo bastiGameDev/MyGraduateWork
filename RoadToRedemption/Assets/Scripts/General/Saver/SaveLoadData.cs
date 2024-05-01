@@ -7,9 +7,11 @@ using Newtonsoft.Json;
 
 public class SaveLoadData : MonoBehaviour
 {
-    public List<GameObject> items; // список предметов, которые нужно сохранять
+    //public List<GameObject> items; // список предметов, которые нужно сохранять
     private string filePath;
-
+    
+    public List<ItemPosition> itemPositions = new List<ItemPosition>();
+    
     // класс для хранения данных о предмете
     [System.Serializable]
     public class ItemData
@@ -38,17 +40,21 @@ public class SaveLoadData : MonoBehaviour
     // метод для сохранения данных
     public void SaveData()
     {
-        List<Vector3> itemPositions = new List<Vector3>();
+        itemPositions.Clear();
 
-        // Замените 'YourItemObject' на имя вашего объекта, который нужно сохранять и загружать
+        // Замените 'PickUp' на тег ваших объектов, которые нужно сохранять и загружать
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("PickUp"))
         {
-            itemPositions.Add(item.transform.position);
+            ItemPosition itemPosition = new ItemPosition();
+            itemPosition.name = item.name;
+            itemPosition.position = item.transform.position;
+            itemPositions.Add(itemPosition);
         }
 
         string jsonData = JsonConvert.SerializeObject(itemPositions);
         File.WriteAllText(filePath, jsonData);
     }
+
 
     public void DeleteSaveData()
     {
@@ -66,20 +72,23 @@ public class SaveLoadData : MonoBehaviour
         if (File.Exists(filePath))
         {
             string jsonData = File.ReadAllText(filePath);
-            List<Vector3> loadedItemPositions = JsonConvert.DeserializeObject<List<Vector3>>(jsonData);
+            List<ItemPosition> loadedItemPositions = JsonConvert.DeserializeObject<List<ItemPosition>>(jsonData);
 
-            // Замените 'YourItemObject' на имя вашего объекта, который нужно сохранять и загружать
-            int i = 0;
+            // Замените 'PickUp' на тег ваших объектов, которые нужно сохранять и загружать
             foreach (GameObject item in GameObject.FindGameObjectsWithTag("PickUp"))
             {
-                if (i < loadedItemPositions.Count)
+                foreach (ItemPosition itemPosition in loadedItemPositions)
                 {
-                    item.transform.position = loadedItemPositions[i];
-                    i++;
+                    if (item.name == itemPosition.name)
+                    {
+                        item.transform.position = itemPosition.position;
+                        break;
+                    }
                 }
             }
         }
     }
+
 
 
     }
