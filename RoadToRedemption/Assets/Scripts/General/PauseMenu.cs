@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = show ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
-    private void Resume()
+    public void Resume()
     {
         fpsCamera.GetComponent<FirstPersonLook>().enabled = true;
         fpsCamera.GetComponent<PickUpObject>().enabled = true;
