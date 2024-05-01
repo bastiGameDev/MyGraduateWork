@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ActionControll : MonoBehaviour
@@ -22,6 +23,7 @@ public class ActionControll : MonoBehaviour
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private FadeOutScreen _fadeOutScreen;
     [SerializeField] private TypewriterEffectTMP typewriterEffectTMP;
+    [SerializeField] private SaveLoadData _saveLoadData;
 
 
     [Header("Colliders")] 
@@ -49,6 +51,13 @@ public class ActionControll : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartTitlesShowAfterEnter());
+    }
+
+    public void ExitGameToMenu()
+    {
+        _saveLoadData.SaveData();
+            
+        SceneManager.LoadScene("MainMenuStart");
     }
     
     private IEnumerator StartTitlesShowAfterEnter()
