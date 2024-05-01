@@ -13,7 +13,7 @@ public class ActionControll : MonoBehaviour
 
     private bool _isFoundTaskImage;
     
-    public Image imageTask;
+    public GameObject imageTask;
     [SerializeField] private GameObject player;
     [SerializeField] private AudioSource soundKeyboardEffect;
     [SerializeField] private GameObject btnStart;
@@ -72,23 +72,9 @@ public class ActionControll : MonoBehaviour
             }
             yield return null;
         }
-    
-        //
-        //ЗДЕСЬ СДЕЛАТЬ ЧЕРЕЗ ПЛЕЕРПРЕФС PLAYERPRESF сохранения
-        //
+        
         RefreshStates();
     }
-    
-    /*private IEnumerator StartTitlesShow()
-    {
-        Debug.Log("Start coroutine");
-        typewriterEffectTMP.StartWritterText();
-        soundKeyboardEffect.Play();
-        
-        yield return new WaitForSeconds(3f);
-        Cursor.visible = true;
-        btnStart.SetActive(true);
-    }*/
 
     private void FixedUpdate()
     {

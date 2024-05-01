@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 public class DishChecker : MonoBehaviour
 {
-    private HashSet<string> _dishesInSink = new HashSet<string>(); // Множество для хранения имен объектов посуды в раковине
-    public List<string> requiredDishNames; // Список имен необходимых предметов посуды
+    private HashSet<string> _dishesInSink = new HashSet<string>(); 
+    public List<string> requiredDishNames; 
 
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private AudioSource soundCompleted;
+    [SerializeField] private GameObject imageCheckMark;
 
     private void Awake()
     {
@@ -17,7 +18,6 @@ public class DishChecker : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Проверяем, является ли входящий объект посудой и добавляем его в коллекцию
         string dishName = other.gameObject.name;
         if (requiredDishNames.Contains(dishName))
         {
@@ -67,6 +67,8 @@ public class DishChecker : MonoBehaviour
             actionControll.IsCompletedSecondScript = true;
             actionControll.RefreshStates();
 
+            imageCheckMark.SetActive(true);
+            ////////
         }
     }
 }

@@ -9,12 +9,14 @@ public class StoveChecker : MonoBehaviour
     [SerializeField] private AudioSource soundCompleted;
 
     [SerializeField] private ActionControll actionControll;
+    [SerializeField] private GameObject imageCheckMark;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Contains("Teapot"))
         {
             soundCompleted.Play();
+            imageCheckMark.SetActive(true);
 
             other.gameObject.tag = "Untagged";
             

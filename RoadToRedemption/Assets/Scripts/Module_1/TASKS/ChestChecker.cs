@@ -6,6 +6,7 @@ public class ChestChecker : MonoBehaviour
 
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private AudioSource voiceover_6;
+    [SerializeField] private GameObject imageCheckMark;
     private void Awake()
     {
         ActionControll actionControll = new ActionControll();
@@ -25,6 +26,8 @@ public class ChestChecker : MonoBehaviour
             
             actionControll.IsCompletedThirdScript = true;
             actionControll.RefreshStates();
+            
+            imageCheckMark.SetActive(true);
         }
     }
 }
