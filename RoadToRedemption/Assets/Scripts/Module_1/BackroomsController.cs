@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class BackroomsController : MonoBehaviour
 {
+    [Header("Backrooms")] 
     [SerializeField] private FadeOutScreen _fadeOutScreen;
     [SerializeField] private GameObject player;
     
@@ -14,6 +15,15 @@ public class BackroomsController : MonoBehaviour
     [SerializeField] private AudioSource musicEnd;
     [SerializeField] private TypewriterEffectTMP typeText;
     [SerializeField] private GameObject textTitles;
+
+    [Header("ForEndGame")] 
+    [SerializeField] private GameObject imageOperatingRoom;
+    [SerializeField] private AudioSource operatingRoomSound;
+    [SerializeField] private TypewriterEffectTMP typeTask;
+    
+    
+    
+    
     
     void Start()
     {
@@ -49,17 +59,25 @@ public class BackroomsController : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(65);//
+        yield return new WaitForSeconds(5);//
 
         player.GetComponent<FirstPersonMovement>().enabled = false;
         
         soundDie.Play();
         _fadeOutScreen.StartFadeOut();
         
-        yield return new WaitForSeconds(9);
+        yield return new WaitForSeconds(5);
+        imageOperatingRoom.SetActive(true);
         soundBoxEnviroment.gameObject.SetActive(false);
+        _fadeOutScreen.StartFadeIn();
+        yield return new WaitForSeconds(5);
+        operatingRoomSound.Play();
         
-        musicEnd.Play();
+        _fadeOutScreen.StartFadeOut();
+        
+        Debug.Log("End");
+        operatingRoomSound.Pause();
+
     }
     
     
