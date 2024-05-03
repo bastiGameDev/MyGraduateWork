@@ -10,5 +10,6 @@ public class CryActivetor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         cry.Play();
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

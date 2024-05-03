@@ -18,6 +18,7 @@ public class ActionControll : MonoBehaviour
     [SerializeField] private AudioSource soundKeyboardEffect;
     [SerializeField] private GameObject btnStart;
     [SerializeField] private GameObject startImage;
+    [SerializeField] private AudioSource voiceOverGoSleep;
     
     [Header("Scripts")]
     [SerializeField] private ActionControll actionControll;
@@ -97,6 +98,13 @@ public class ActionControll : MonoBehaviour
     public void EndingGarage()
     {
         StartCoroutine(TeleportPlayerTo(-14.4099998f,0.120125294f,42.1199989f));
+        StartCoroutine(VoiceOverSpeak(3f, voiceOverGoSleep));
+    }
+
+    private IEnumerator VoiceOverSpeak(float duration, AudioSource voice)
+    {
+        yield return new WaitForSeconds(duration);
+        voice.Play();
     }
     
     private IEnumerator TeleportPlayerTo(float x, float y, float z)
