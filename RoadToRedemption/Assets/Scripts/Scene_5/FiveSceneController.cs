@@ -19,7 +19,7 @@ public class FiveSceneController : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         
-        _fadeOutScreen.StartFadeOut();
+        _fadeOutScreen.StartFadeIn();
         
         yield return new WaitForSeconds(1f);
         

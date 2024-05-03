@@ -682,6 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fadeOutScreen: {fileID: 1096474055}
   typeWriter: {fileID: 1096474056}
+  taskText: {fileID: 1541300751}
 --- !u!114 &1096474055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whyCry: {fileID: 618766701}
   abDoor: {fileID: 7358853126029120148}
+  audioBox: {fileID: 1055268512}
   fadeOutScreen: {fileID: 1096474051}
 --- !u!65 &2117713359
 BoxCollider:

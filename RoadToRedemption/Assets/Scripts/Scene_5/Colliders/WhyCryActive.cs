@@ -6,6 +6,7 @@ public class WhyCryActive : MonoBehaviour
 {
     [SerializeField] private AudioSource whyCry;
     [SerializeField] private AbDoor abDoor;
+    [SerializeField] private GameObject audioBox;
 
     [SerializeField] private FadeOutScreen fadeOutScreen;
     private void OnTriggerEnter(Collider other)
@@ -26,5 +27,7 @@ public class WhyCryActive : MonoBehaviour
         yield return new WaitForSeconds(5f);
         fadeOutScreen.StartFadeOut();
 
+        audioBox.SetActive(false);
+        //И тут уже конец программы
     }
 }
