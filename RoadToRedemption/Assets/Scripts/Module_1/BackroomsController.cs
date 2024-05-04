@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BackroomsController : MonoBehaviour
@@ -77,7 +78,9 @@ public class BackroomsController : MonoBehaviour
         
         Debug.Log("End");
         operatingRoomSound.Pause();
-
+        
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Scene_5");
     }
     
     

@@ -28,6 +28,10 @@ public class WhyCryActive : MonoBehaviour
         fadeOutScreen.StartFadeOut();
 
         audioBox.SetActive(false);
+
+        yield return new WaitForSeconds(2.1f);
+
+
         //И тут уже конец программы
     }
 }
