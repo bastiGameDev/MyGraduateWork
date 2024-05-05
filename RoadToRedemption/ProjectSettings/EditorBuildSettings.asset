@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Module_1/Scene_5.unity
     guid: 9c969a405cdfd5e4d946f95c3df57980
+  - enabled: 1
+    path: Assets/Skybox/Scene/mainScene.unity
+    guid: 7540eab4397561d4cb2a37cb06761818
   m_configObjects: {}

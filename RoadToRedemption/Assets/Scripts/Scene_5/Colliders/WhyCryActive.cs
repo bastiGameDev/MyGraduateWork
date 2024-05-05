@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WhyCryActive : MonoBehaviour
 {
@@ -9,8 +10,14 @@ public class WhyCryActive : MonoBehaviour
     [SerializeField] private GameObject audioBox;
 
     [SerializeField] private FadeOutScreen fadeOutScreen;
+    [SerializeField] private AudioSource endMusic;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject endTitles;
+    [SerializeField] private TypewriterEffectTMP writerEnd;
+
     private void OnTriggerEnter(Collider other)
     {
+        endMusic.Play();
         StartCoroutine(StartVoiceover());
         gameObject.GetComponent<BoxCollider>().enabled = false;
     }
@@ -30,8 +37,12 @@ public class WhyCryActive : MonoBehaviour
         audioBox.SetActive(false);
 
         yield return new WaitForSeconds(2.1f);
+        player.GetComponent<FirstPersonMovement>().enabled = false;
 
-
-        //И тут уже конец программы
+        endTitles.SetActive(true);
+        writerEnd.StartWritterText();
+        
+        yield return new WaitForSeconds(20f);
+        SceneManager.LoadScene("mainScene");
     }
 }
