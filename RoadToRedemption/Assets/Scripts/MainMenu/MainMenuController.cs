@@ -24,6 +24,14 @@ public class MainMenuController : MonoBehaviour
         
     };
 
+    public void TestStart()
+    {
+        if (PlayerPrefs.HasKey("lastScene"))
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+        }
+    }
+
     private void Start()
     {
         StartCoroutine(ChangePhraseRoutine());
