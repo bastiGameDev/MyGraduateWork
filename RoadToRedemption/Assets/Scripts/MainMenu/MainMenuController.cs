@@ -7,8 +7,10 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI phraseText;
     [SerializeField] private FadeOutScreen _fadeOutScreen;
+    [SerializeField] private SaveLoadData saveLoadDataScript;
 
     [SerializeField] private FadeScreen _fadeScreen;
+    [SerializeField] private GameObject _fadeImage;
     public AudioSource soundClick;
 
     private string[] phrases = {
@@ -26,8 +28,22 @@ public class MainMenuController : MonoBehaviour
 
     public void TestStart()
     {
+        StartCoroutine(LoadGame());
+    }
+
+    private IEnumerator LoadGame()
+    {
+        soundClick.Play();
+        
+        //yield return new WaitForSeconds(2f);
+        
         if (PlayerPrefs.HasKey("lastScene"))
         {
+            _fadeImage.SetActive(true);
+            _fadeOutScreen.StartFadeOut();
+            
+            yield return new WaitForSeconds(3f);
+            
             SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
         }
     }
@@ -78,6 +94,9 @@ public class MainMenuController : MonoBehaviour
 
     public void GameStartAfterTitles()
     {
+        PlayerPrefs.DeleteKey("lastScene");
+        saveLoadDataScript.DeleteSaveData();
+        
         soundClick.Play();
         
         SceneManager.LoadScene("Scene_1");

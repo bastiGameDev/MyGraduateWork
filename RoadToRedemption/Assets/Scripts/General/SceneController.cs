@@ -12,10 +12,7 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        /*if (PlayerPrefs.HasKey("lastScene"))
-        {
-            SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
-        }*/
+        //throw
     }
 
     private void OnApplicationQuit()
