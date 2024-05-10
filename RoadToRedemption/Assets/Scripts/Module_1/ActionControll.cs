@@ -57,8 +57,15 @@ public class ActionControll : MonoBehaviour
     public void ExitGameToMenu()
     {
         _saveLoadData.SaveData();
-            
-        SceneManager.LoadScene("MainMenuStart");
+        
+        string lastSceneName = SceneManager.GetActiveScene().name;
+        
+        PlayerPrefs.SetString("lastScene", lastSceneName);
+        
+        //SceneManager.UnloadSceneAsync(PlayerPrefs.GetString("lastScene"));    
+        SceneManager.UnloadSceneAsync("Scene_1");
+        SceneManager.LoadSceneAsync("MainMenuStart");
+        
     }
     
     private IEnumerator StartTitlesShowAfterEnter()

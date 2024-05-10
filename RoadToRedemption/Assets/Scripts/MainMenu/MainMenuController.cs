@@ -26,6 +26,10 @@ public class MainMenuController : MonoBehaviour
         
     };
 
+    public void HardStart()
+    {
+        SceneManager.LoadSceneAsync("Scene_1");
+    }
     public void TestStart()
     {
         StartCoroutine(LoadGame());
@@ -39,12 +43,16 @@ public class MainMenuController : MonoBehaviour
         
         if (PlayerPrefs.HasKey("lastScene"))
         {
+           // SceneManager.UnloadSceneAsync(PlayerPrefs.GetString("lastScene"));
             _fadeImage.SetActive(true);
             _fadeOutScreen.StartFadeOut();
             
             yield return new WaitForSeconds(3f);
             
-            SceneManager.LoadScene(PlayerPrefs.GetString("lastScene"));
+            Scene scene = SceneManager.GetSceneByName("Scene_1");
+            SceneManager.SetActiveScene(scene);
+            
+            //SceneManager.LoadSceneAsync(PlayerPrefs.GetString("lastScene"));
         }
     }
 
