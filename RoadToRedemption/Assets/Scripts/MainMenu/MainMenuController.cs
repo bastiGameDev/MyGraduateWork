@@ -49,10 +49,10 @@ public class MainMenuController : MonoBehaviour
             
             yield return new WaitForSeconds(3f);
             
-            Scene scene = SceneManager.GetSceneByName("Scene_1");
-            SceneManager.SetActiveScene(scene);
+            //Scene scene = SceneManager.GetSceneByName("Scene_1");
+            //SceneManager.SetActiveScene(scene);
             
-            //SceneManager.LoadSceneAsync(PlayerPrefs.GetString("lastScene"));
+            SceneManager.LoadSceneAsync(PlayerPrefs.GetString("lastScene"));
         }
     }
 

@@ -63,7 +63,7 @@ public class ActionControll : MonoBehaviour
         PlayerPrefs.SetString("lastScene", lastSceneName);
         
         //SceneManager.UnloadSceneAsync(PlayerPrefs.GetString("lastScene"));    
-        SceneManager.UnloadSceneAsync("Scene_1");
+        
         SceneManager.LoadSceneAsync("MainMenuStart");
         
     }
