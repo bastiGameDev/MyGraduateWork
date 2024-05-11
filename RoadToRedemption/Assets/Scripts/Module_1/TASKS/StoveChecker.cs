@@ -10,6 +10,12 @@ public class StoveChecker : MonoBehaviour
 
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private GameObject imageCheckMark;
+    
+    //
+    [SerializeField] private GameObject panelChoice; 
+    [SerializeField] private GameObject notification;
+    [SerializeField] private GameObject fpsController;
+    [SerializeField] private GameObject fpsCamera;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,11 +40,55 @@ public class StoveChecker : MonoBehaviour
         //Здесь голос что надо подождать чай
         
         //Затухание экрана и переход в гаржаи   
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(6);
+        //Здесь окно выбора зайти ли в магазин за пивом//
+        panelChoice.SetActive(true);
         
-        actionControll.EndingTasks();
+        ShowCursor(true);
+        
+        FreezeMovement(false);
+        //actionControll.EndingTasks(); <-- это переносится в обработчик событиый кнопки панели выборы
+    }
 
+    public void FreezeMovement(bool state)
+    {
+        fpsCamera.GetComponent<FirstPersonLook>().enabled = state;
+        fpsCamera.GetComponent<PickUpObject>().enabled = state;
+        fpsController.GetComponent<PlayerInteraction>().enabled = state;
+    }
+
+    public void ChoiceTrue()
+    {
         
+        StartCoroutine(ShowHideNotification());
+        //PlayerPrefs +score
+        actionControll.EndingTasks();
+        ShowCursor(false);
+        FreezeMovement(true);
+    }
+    public void ChoiceFalse()
+    {
+        
+        StartCoroutine(ShowHideNotification());
+        //PlayerPrefs -score
+        actionControll.EndingTasks();
+        ShowCursor(false);
+        panelChoice.SetActive(false);
+        FreezeMovement(true);
+    }
+    
+    private IEnumerator ShowHideNotification()
+    {
+        notification.SetActive(true);
+        yield return new WaitForSeconds(2.1f);
+        notification.SetActive(false);
+        gameObject.SetActive(false);
+        panelChoice.SetActive(false);
+    }
+    private void ShowCursor(bool show)
+    {
+        Cursor.visible = show;
+        Cursor.lockState = show ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
 }

@@ -29,6 +29,7 @@ public class MainMenuController : MonoBehaviour
 
     public void HardStart()
     {
+        saveLoadDataScript.DeleteSaveData();
         SceneManager.LoadSceneAsync("Scene_1");
     }
     public void TestStart()
