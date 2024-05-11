@@ -5,6 +5,7 @@ using UnityEngine;
 public class BottleContoll : MonoBehaviour, IInterectable
 {
     [SerializeField] private AudioSource swallowingSound;
+    [SerializeField] private GameObject notification;
     public string GetDescription()
     {
         return "<color=green>Нажмите, что бы выпить</color>";
@@ -12,9 +13,19 @@ public class BottleContoll : MonoBehaviour, IInterectable
     }
     public void Interact()
     {
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         swallowingSound.Play();
         Debug.Log("Drink...");
-        gameObject.SetActive(false);
         
+        StartCoroutine(ShowHideNotification());
+        
+    }
+
+    private IEnumerator ShowHideNotification()
+    {
+        notification.SetActive(true);
+        yield return new WaitForSeconds(2.1f);
+        notification.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
