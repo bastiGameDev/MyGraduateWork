@@ -21,6 +21,18 @@ public class BottleContoll : MonoBehaviour, IInterectable
         
     }
 
+    public void ShowNotificationForeign()
+    {
+        StartCoroutine(ShowNotificationForeignRoutine());
+    }
+
+    private IEnumerator ShowNotificationForeignRoutine()
+    {
+        notification.SetActive(true);
+        yield return new WaitForSeconds(2.1f);
+        notification.SetActive(false);
+    }
+
     private IEnumerator ShowHideNotification()
     {
         notification.SetActive(true);

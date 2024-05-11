@@ -19,12 +19,18 @@ public class ActionControll : MonoBehaviour
     [SerializeField] private GameObject btnStart;
     [SerializeField] private GameObject startImage;
     [SerializeField] private AudioSource voiceOverGoSleep;
+    [SerializeField] private AudioSource phoneCallSound;
+    [SerializeField] private GameObject textCallPhone;
+    [SerializeField] private GameObject panelChoiceCall;
+    [SerializeField] private AudioSource voiceoverFriend;
     
     [Header("Scripts")]
     [SerializeField] private ActionControll actionControll;
     [SerializeField] private FadeOutScreen _fadeOutScreen;
     [SerializeField] private TypewriterEffectTMP typewriterEffectTMP;
     [SerializeField] private SaveLoadData _saveLoadData;
+    [SerializeField] private StoveChecker _stoveChecker;
+    [SerializeField] private BottleContoll _bottleContoll;
 
 
     [Header("Colliders")] 
@@ -106,6 +112,56 @@ public class ActionControll : MonoBehaviour
     {
         StartCoroutine(TeleportPlayerTo(-14.4099998f,0.120125294f,42.1199989f));
         StartCoroutine(VoiceOverSpeak(3f, voiceOverGoSleep));
+        StartCoroutine(PhoneCall());
+    }
+
+    private IEnumerator PhoneCall()
+    {
+        yield return new WaitForSeconds(2f);
+        phoneCallSound.Play();
+        textCallPhone.SetActive(true);
+        yield return new WaitForSeconds(5f);
+       /* while (true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                textCallPhone.SetActive(false);
+                phoneCallSound.Pause();
+                voiceoverFriend.Play();
+                
+                break;
+            }
+        }*/
+        ShowCursor(true);
+        _stoveChecker.FreezeMovement(false);
+        panelChoiceCall.SetActive(true);
+        
+    }
+    
+    //два метода обработчика событий здесь должна быть 
+
+    public void FriendAnswerTrue()
+    {
+        //PlayerPrefs --
+        _bottleContoll.ShowNotificationForeign();
+        panelChoiceCall.SetActive(false);
+        ShowCursor(false);
+        _stoveChecker.FreezeMovement(true);
+    }
+    public void FriendAnswerFalse()
+    {
+        //PlayerPrefs --
+        _bottleContoll.ShowNotificationForeign();
+        panelChoiceCall.SetActive(false);
+        ShowCursor(false);
+        _stoveChecker.FreezeMovement(true);
+
+    }
+    
+    private void ShowCursor(bool show)
+    {
+        Cursor.visible = show;
+        Cursor.lockState = show ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     private IEnumerator VoiceOverSpeak(float duration, AudioSource voice)
