@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private FadeScreen _fadeScreen;
     [SerializeField] private GameObject _fadeImage;
     public AudioSource soundClick;
+    [SerializeField] private GameObject panelSettings;
 
     private string[] phrases = {
         "Все мы не вечные",
@@ -77,6 +78,10 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    public void OpenSettings()
+    {
+        panelSettings.SetActive(true);
+    }
     private string GetRandomPhrase()
     {
         int randomIndex = Random.Range(0, phrases.Length);

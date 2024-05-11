@@ -4,27 +4,61 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class SettingsManager : MonoBehaviour
 {
-    public Toggle postProcessingToggle; // ссылка на чекбокс на канвасе
-    public PostProcessVolume postProcessVolume; // ссылка на объект PostProcessVolume в сцене
+    public Toggle postProcessingToggle; 
+    public PostProcessVolume postProcessVolume; 
+    public Slider volumeSlider;
 
+    [SerializeField] private GameObject panelSettings;
+    [SerializeField] private GameObject pauseMenu;
     private void Awake()
     {
-        // устанавливаем значение чекбокса в соответствии с текущим состоянием пост-обработки
         postProcessingToggle.isOn = postProcessVolume.enabled;
-
-        // подписываемся на событие изменения значения чекбокса
+        
         postProcessingToggle.onValueChanged.AddListener(OnPostProcessingToggleChanged);
+        
+        volumeSlider.value = AudioListener.volume;
+
+        volumeSlider.onValueChanged.AddListener(OnVolumeSliderValueChanged);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            panelSettings.SetActive(false);
+        }
+    }
+    private void OnVolumeSliderValueChanged(float value)
+    {
+        AudioListener.volume = value;
+
+        PlayerPrefs.SetFloat("SelectedVolume", value);
     }
 
     private void OnPostProcessingToggleChanged(bool isOn)
     {
-        // включаем/выключаем пост-обработку в зависимости от значения чекбокса
         postProcessVolume.enabled = isOn;
+    }
+
+    public void HideSettings()
+    {
+        panelSettings.SetActive(false);
+        pauseMenu.SetActive(true);
+    }
+
+    public void OpenSettings()
+    {
+        pauseMenu.SetActive(false);
+        panelSettings.SetActive(true);
+    }
+
+    public void HideSettingsMainMenu()
+    {
+        panelSettings.SetActive(false);
     }
 
     private void OnDestroy()
     {
-        // отписываемся от события изменения значения чекбокса
         postProcessingToggle.onValueChanged.RemoveListener(OnPostProcessingToggleChanged);
+        volumeSlider.onValueChanged.RemoveListener(OnVolumeSliderValueChanged);
     }
 }
