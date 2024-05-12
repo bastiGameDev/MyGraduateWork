@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
     [SerializeField] private GameObject fpsController;
     [SerializeField] private GameObject fpsCamera;
+    [SerializeField] private SaveLoadData saveLoadData;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -57,6 +58,13 @@ public class PauseMenu : MonoBehaviour
     public void ExitGame()
     {
         Environment.Exit(0);
-        SceneManager.LoadScene("mainScene");
+        //SceneManager.LoadScene("mainScene");
+    }
+
+    public void ExitGameFromSceneOne()
+    {
+        saveLoadData.SaveData();
+        
+        Environment.Exit(0);
     }
 }
