@@ -44,6 +44,18 @@ public class WhyCryActive : MonoBehaviour
         player.GetComponent<FirstPersonMovement>().enabled = false;
 
         endTitles.SetActive(true);
+        if (PlayerPrefs.GetInt("Score") <= 20)
+        {
+            writerEnd.fullText = textEnding1;
+        } 
+        else if (PlayerPrefs.GetInt("Score") > 20 && PlayerPrefs.GetInt("Score") <= 40)
+        {
+            writerEnd.fullText = textEnding2;
+        } 
+        else if (PlayerPrefs.GetInt("Score") > 40)
+        {
+            writerEnd.fullText = textEnding3;
+        }
         writerEnd.StartWritterText();
         
         yield return new WaitForSeconds(20f);
