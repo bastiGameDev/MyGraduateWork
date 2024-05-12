@@ -13,6 +13,8 @@ public class BottleContoll : MonoBehaviour, IInterectable
     }
     public void Interact()
     {
+        PlayerPrefs.SetInt("Score", (PlayerPrefs.GetInt("Score") + 10));
+        
         gameObject.GetComponent<BoxCollider>().enabled = false;
         swallowingSound.Play();
         Debug.Log("Drink...");

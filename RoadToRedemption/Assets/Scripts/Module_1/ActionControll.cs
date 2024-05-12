@@ -137,17 +137,6 @@ public class ActionControll : MonoBehaviour
             yield return null;
         }
         
-        /*while (true)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                textCallPhone.SetActive(false);
-                phoneCallSound.Pause();
-                voiceoverFriend.Play();
-                
-                break;
-            }
-        }*/
         ShowCursor(true);
         _stoveChecker.FreezeMovement(false);
         panelChoiceCall.SetActive(true);
@@ -158,7 +147,7 @@ public class ActionControll : MonoBehaviour
 
     public void FriendAnswerTrue()
     {
-        //PlayerPrefs --
+        PlayerPrefs.SetInt("Score", (PlayerPrefs.GetInt("Score") + 25));
         _bottleContoll.ShowNotificationForeign();
         panelChoiceCall.SetActive(false);
         ShowCursor(false);
@@ -166,7 +155,7 @@ public class ActionControll : MonoBehaviour
     }
     public void FriendAnswerFalse()
     {
-        //PlayerPrefs --
+        //PlayerPrefs -- не требуется.
         _bottleContoll.ShowNotificationForeign();
         panelChoiceCall.SetActive(false);
         ShowCursor(false);

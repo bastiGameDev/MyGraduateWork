@@ -59,6 +59,7 @@ public class StoveChecker : MonoBehaviour
 
     public void ChoiceTrue()
     {
+        PlayerPrefs.SetInt("Score", (PlayerPrefs.GetInt("Score") + 20));
         
         StartCoroutine(ShowHideNotification());
         //PlayerPrefs +score
