@@ -120,8 +120,24 @@ public class ActionControll : MonoBehaviour
         yield return new WaitForSeconds(2f);
         phoneCallSound.Play();
         textCallPhone.SetActive(true);
-        yield return new WaitForSeconds(5f);
-       /* while (true)
+        //yield return new WaitForSeconds(5f);
+        
+        while (true)
+        {
+            // Проверяем нажатие кнопки E
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                textCallPhone.SetActive(false);
+                phoneCallSound.Pause();
+                voiceoverFriend.Play();
+                
+                break;
+            }
+            // Ждем один кадр
+            yield return null;
+        }
+        
+        /*while (true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
