@@ -15,6 +15,10 @@ public class WhyCryActive : MonoBehaviour
     [SerializeField] private GameObject endTitles;
     [SerializeField] private TypewriterEffectTMP writerEnd;
 
+    [SerializeField] private string textEnding1 = "\tЛетом 2020 года молодой водитель по имени Дмитрий в состоянии алкогольного опьянения управлял автомобилем Honda. На Ленинском проспекте столицы он не справился с управлением, въехав на большой скорости автомобилю Mercedes-Benz в заднюю часть. Пассажиры и водитель Mercedes не пострадали. Дмитрия врачи спасти не смогли, он умер в больнице. ";
+    [SerializeField] private string textEnding2 = "";
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         endMusic.Play();
