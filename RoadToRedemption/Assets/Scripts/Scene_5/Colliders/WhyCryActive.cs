@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,12 @@ public class WhyCryActive : MonoBehaviour
         gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
+    private void Start()
+    {
+        //PlayerPrefs.SetInt("Score", 40);
+        Debug.Log(PlayerPrefs.GetInt("Score"));
+    }
+
     private IEnumerator StartVoiceover()
     {
         yield return new WaitForSeconds(1.5f);
@@ -44,9 +51,10 @@ public class WhyCryActive : MonoBehaviour
         player.GetComponent<FirstPersonMovement>().enabled = false;
 
         endTitles.SetActive(true);
+        
         if (PlayerPrefs.GetInt("Score") <= 20)
         {
-            writerEnd.fullText = textEnding1;
+            writerEnd.fullText = textEnding3;
         } 
         else if (PlayerPrefs.GetInt("Score") > 20 && PlayerPrefs.GetInt("Score") <= 40)
         {
@@ -54,8 +62,9 @@ public class WhyCryActive : MonoBehaviour
         } 
         else if (PlayerPrefs.GetInt("Score") > 40)
         {
-            writerEnd.fullText = textEnding3;
+            writerEnd.fullText = textEnding1;
         }
+        
         writerEnd.StartWritterText();
         
         yield return new WaitForSeconds(20f);
