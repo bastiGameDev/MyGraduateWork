@@ -3259,7 +3259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.8, y: 151.2}
+  m_AnchoredPosition: {x: 30.5, y: 151.2}
   m_SizeDelta: {x: 29.258, y: 29.258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411118853
@@ -6951,7 +6951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241, y: 227.3}
+  m_AnchoredPosition: {x: 259.4, y: 227.3}
   m_SizeDelta: {x: 29.2557, y: 29.2555}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964621522
@@ -9426,7 +9426,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 805173716493603531}
   fpsController: {fileID: 207231296041141204}
   fpsCamera: {fileID: 1698712944036269785}
-  saveLoadData: {fileID: 0}
+  saveLoadData: {fileID: 2033441537}
 --- !u!114 &1309188213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27544,7 +27544,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698712944036269785}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 

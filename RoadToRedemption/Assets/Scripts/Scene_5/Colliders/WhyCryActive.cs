@@ -67,7 +67,7 @@ public class WhyCryActive : MonoBehaviour
         
         writerEnd.StartWritterText();
         
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(120f);
         SceneManager.LoadScene("mainScene");
     }
 }

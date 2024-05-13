@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -102,7 +104,7 @@ public class MainMenuController : MonoBehaviour
     public void ExitGame()
     {
         soundClick.Play();
-        
+
         Application.Quit();
     }
 
@@ -110,6 +112,7 @@ public class MainMenuController : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("lastScene");
         saveLoadDataScript.DeleteSaveData();
+        PlayerPrefs.DeleteAll();
         
         soundClick.Play();
         

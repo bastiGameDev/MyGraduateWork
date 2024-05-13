@@ -57,14 +57,14 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitGame()
     {
-        Environment.Exit(0);
+        Application.Quit();
         //SceneManager.LoadScene("mainScene");
     }
 
     public void ExitGameFromSceneOne()
     {
         saveLoadData.SaveData();
-        
-        Environment.Exit(0);
+
+        Application.Quit();
     }
 }
